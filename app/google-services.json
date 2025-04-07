@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "887202255672",
+    "project_id": "snaccgo",
+    "storage_bucket": "snaccgo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887202255672:android:2e8ae9151904d4266ee7cd",
+        "android_client_info": {
+          "package_name": "com.example.snaccgo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo7aZHvVyRNnqT0yDKHkULzEA5A7GxjXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
