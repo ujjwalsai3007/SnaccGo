@@ -81,6 +81,11 @@ fun HomeScreen() {
             ProfileHeader()
             Search()
             Banner()
+            ;skwfhgnkjewnfkgvbdfwjkbnvkdbnfbvknwd;kbvnew
+            ewrgndw;lfngv;ldwnfbvlkndwfbv
+            kjewfbdvlkjdbglkvbdwflv
+            ;bkvndfw;kjnblkwdfgbv
+            wbnfewd;kjbvn
             
             // Main content
             Box(
