@@ -11,8 +11,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -52,6 +56,20 @@ fun HomeScreen() {
                 }
             )
         }
+
+        @Composable
+        fun HomeScreen() {
+            var currentRoute by remember { mutableStateOf("home") }
+
+            Scaffold(
+                bottomBar = {
+                    SnaccGoBottomNavigation(
+                        currentRoute = currentRoute,
+                        onNavigate = { route ->
+                            currentRoute = route
+                        }
+                    )
+                }
     ) { paddingValues ->
         // This is where your screen content goes
         Column(
@@ -62,6 +80,7 @@ fun HomeScreen() {
             // Profile image at the top
             ProfileHeader()
             Search()
+            Banner()
             
             // Main content
             Box(
@@ -77,6 +96,27 @@ fun HomeScreen() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun Banner() {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(horizontal = 19.dp, vertical = 8.dp),
+        shape = RoundedCornerShape(16.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.banner),
+            contentDescription = "Banner Image",
+            modifier = Modifier
+                .fillMaxWidth()        // Fill the parent width
+                .wrapContentHeight(),  // Let height adjust based on aspect ratio
+            contentScale = ContentScale.Fit  // Show the entire image with no cropping
+        )
     }
 }
 
